@@ -7,7 +7,7 @@ export const Intro = () => {
     const loading = gameState.state == "loading";
 
     return (
-        <Fade in={!!highScore}>
+        <Fade in={typeof highScore == "number"}>
             <Box p={"4"}>
                 <Card variant={"outline"} bg={"gray.900"}>
                     <CardHeader>

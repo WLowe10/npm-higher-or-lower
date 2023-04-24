@@ -5,9 +5,7 @@ export const useHighScore = (): [number, React.Dispatch<React.SetStateAction<num
 
     useEffect(() => {
         const savedHighScore = Number(localStorage.getItem("highScore"));
-        if (!isNaN(savedHighScore)) {
-            setHighScore(savedHighScore)
-        };
+        setHighScore(savedHighScore || 0)
     }, [])
 
     return [highScore, setHighScore];
